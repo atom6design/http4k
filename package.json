@@ -1,0 +1,33 @@
+{
+  "name": "http4k",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedEid3/http4k.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedEid3/http4k/issues"
+  },
+  "homepage": "https://github.com/AhmedEid3/http4k#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "jquery": "^3.4.1",
+    "pug": "^2.0.4"
+  }
+}

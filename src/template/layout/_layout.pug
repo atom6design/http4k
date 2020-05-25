@@ -1,0 +1,19 @@
+block variables
+    - var title = "Home"
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        include _styles
+        title #{title}
+    body
+
+        block content
+
+        include ../components/_footer
+
+        // Spinner Loading
+        include ../components/_spinner-loading
+
+        include _scripts

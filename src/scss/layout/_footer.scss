@@ -1,0 +1,26 @@
+footer {
+  background-color: $primary-color;
+  position: relative;
+  z-index: 99;
+  padding: 65px 0 85px 0;
+  .logo-footer {
+    margin-bottom: 14px;
+  }
+  h4 {
+    color: $secondary-font-color;
+    margin-bottom: 50px;
+    @media (max-width: $max-md) {
+      margin-bottom: 40px;
+      margin-top: 32px;
+    }
+  }
+  p {
+    max-width: 210px;
+    margin-top: 18px;
+    color: $secondary-font-color;
+  }
+  a {
+    display: block;
+    padding: 10px 0;
+  }
+}

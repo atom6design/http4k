@@ -1,0 +1,125 @@
+extends ./layout/_layout-intro
+
+block variables
+    - var title = "Introduction"
+
+block content
+
+    .intro
+        .row.no-gutters.justify-content-center
+            .aside.col-auto
+                img(src="images/exchange-icon.svg" class="mb-3 sideToggle d-inline-block d-md-none" width="20" alt="" srcset="")
+
+                .logo
+                    img(src="images/logo-intro.svg" alt="logo" srcset="")
+
+                form
+                    .form-group
+                        img(src="images/search-icon.svg" alt="" srcset="")
+                        input.form-control(type='text' placeholder='Search...' aria-label='Search')
+
+                ul.nav.flex-column
+                    li.nav-item
+                        a.nav-link(href='#') Introduction
+                    li.nav-item
+                        a.nav-link(href='#') Rationale & Concepts
+                    li.nav-item
+                        a.nav-link(href='#') Installation
+                    li.nav-item
+                        a.nav-link(href='#') Getting started
+
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Developer Guide 
+                        .dropdown-menu
+                            a.dropdown-item.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Modules 
+                            .dropdown-menu
+                                a.dropdown-item(href='#') AWS
+                                a.dropdown-item(href='#') Core
+                            a.dropdown-item(href='#') Application Testing
+
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Tutorials 
+                        .dropdown-menu
+                            a.dropdown-item.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Modules 
+                            .dropdown-menu
+                                a.dropdown-item(href='#') AWS
+                                a.dropdown-item(href='#') Core
+                            a.dropdown-item(href='#') Application Testing
+
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Cookbook
+                        .dropdown-menu
+                            a.dropdown-item.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Modules 
+                            .dropdown-menu
+                                a.dropdown-item(href='#') AWS
+                                a.dropdown-item(href='#') Core
+                            a.dropdown-item(href='#') Application Testing
+
+                    li.nav-item
+                        a.nav-link(href='#') Performance
+                    li.nav-item
+                        a.nav-link(href='#') In action
+
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Blog
+                        .dropdown-menu
+                            a.dropdown-item(href='#') Modules
+                            a.dropdown-item(href='#') Application Testing
+
+                    li.nav-item
+                        a.nav-link.active(href='#') Getting Support
+                    li.nav-item
+                        a.nav-link(href='#') Contribute/Support 
+                    li.nav-item
+                        a.nav-link(href='#') http4k
+                    li.nav-item
+                        a.nav-link(href='#') API docs
+                    li.nav-item
+                        a.nav-link(href='#') Changelog
+                    li.nav-item
+                        a.nav-link(href='#') FAQ
+
+            main.col
+                .container
+                    .content
+
+                        img(src="images/exchange-icon.svg" class="mb-3 sideToggle" width="20" alt="" srcset="")
+
+                        h1.h3 Introduction
+                        p #[a(href="#") http4k] is a lightweight but fully-featured HTTP toolkit written in pure #[a(href="#") Kotlin] that enables the serving and consuming of HTTP services in a functional and consistent way. #[a(href="#") http4k] applications are just Kotlin functions which can be mounted into a running backend. For example, here's a simple echo server:
+
+                        figure.code
+                            .title EXAMPLE 
+                                button(data-toggle="tooltip" class="getCode" data-placement="top" title="Copy to clipboard"): img(src="images/copy-icon.svg" alt="")
+                            pre
+                                code
+                                    span.keyword-color val 
+                                    |app: HttpHandler = { request: Request -> Response(OK).body(request.body) }
+                                    br
+                                    span.keyword-color val 
+                                    |server = app.asServer(SunHttp(#[span.number-color 8000])).start()
+
+
+                        p #[a(href="#") http4k] consists of a core library, http4k-core, providing a base HTTP implementation + a number of capability abstractions (such as servers, clients, templating, websockets etc). These capabilities are then implemented in add-on modules.
+
+                        h4 The principles of http4k are:
+                        ul
+                            li
+                                p #[strong Application as a Function:] Based on the Twitter paper #[a(href="") "Your Server as a Function"], all HTTP services can be composed of 2 types of simple function:
+                                ul
+                                    li.mb-4 HttpHandler: #[span.define-color (Request) -> Response] - provides a remote call for processing a Request.
+                                    li  Filter: #[span.define-color (HttpHandler) -> HttpHandler]  - adds Request/Response pre/post processing. 
+                                    li These filters are composed to make stacks of reusable behaviour that can then be applied to an HttpHandler.
+
+                            li
+                                p #[strong Immutability:] All entities in the library are immutable unless their function explicitly disallows this.
+
+                            li
+                                p #[strong Symmetric:] The HttpHandler interface is identical for both HTTP services and clients. This allows for simple offline testability of applications, as well as plugging together of services without HTTP container being required.
+
+                            li
+                                p #[strong Dependency-lite:] Apart the fr om Kotlin StdLib, http4k-core module has ZERO dependencies and weighs in at ~700kb. Add-on mo dules only have dependencies required for specific implementation.
+                        
+
+
+

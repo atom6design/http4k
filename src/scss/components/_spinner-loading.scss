@@ -1,0 +1,34 @@
+%position {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spinner-loading {
+  @extend %position;
+  background-color: rgba(#e5e5e5, 0.7);
+
+  img {
+    @extend %position;
+    width: 52px;
+    height: 52px;
+    margin: auto;
+    animation: rotate 1s linear infinite;
+    @media (max-width: $max-sm) {
+      width: 39px;
+      height: 39px;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

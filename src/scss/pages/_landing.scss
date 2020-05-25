@@ -1,0 +1,154 @@
+.features {
+  padding: 40px 0 0;
+  h2 {
+    max-width: 285px;
+    margin: auto;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.card-custom {
+  padding: 5px;
+  img {
+    margin-bottom: 20px;
+  }
+  .dash {
+    width: 46px;
+    height: 2px;
+    margin: 12px 0;
+  }
+
+  p {
+    margin-bottom: 60px;
+    @media (max-width: $max-md) {
+      max-width: 325px;
+    }
+  }
+}
+
+.our-document {
+  background-color: $gray-color;
+  padding: 130px 0 150px 0;
+  min-height: 650px;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  @media (max-width: $max-md) {
+    padding: 70px 0 80px 0;
+    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.api {
+  margin-top: -260px;
+  margin-bottom: 150px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 6.06309px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+
+  @media (max-width: $max-lg) {
+    margin-top: -230px;
+  }
+  @media (max-width: $max-md) {
+    margin-top: -280px;
+    margin-bottom: 80px;
+  }
+  @media (max-width: $max-sm) {
+    margin-top: -320px;
+  }
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+  p {
+    max-width: 200px;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    @media (max-width: $max-lg) {
+      max-width: 300px;
+    }
+  }
+  img {
+    margin-bottom: 10px;
+  }
+}
+
+.community {
+  margin-bottom: 80px;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 2rem;
+    max-width: 89%;
+  }
+}
+.contribuitors {
+  h4 {
+    max-width: 380px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c4c4c4;
+    @media (max-width: $max-sm) {
+      margin-top: 60px;
+    }
+  }
+  img {
+    margin: 10px 10px;
+  }
+}
+
+.support {
+  margin-bottom: 106px;
+  @media (max-width: $max-md) {
+    margin-bottom: 65px;
+  }
+}
+.card-shadow {
+  box-shadow: 0px 7.28173px 36.4087px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+  padding: 30px 40px 30px 20px;
+  margin-bottom: 44px;
+  img {
+    margin-top: 5px;
+  }
+  h3 {
+    margin-bottom: 1rem;
+  }
+  p {
+    max-width: 430px;
+    margin-bottom: 2rem;
+  }
+  .see-more {
+    text-align: right;
+    a {
+      color: #000000;
+    }
+  }
+}
+
+.developers-custom {
+  h2 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  p {
+    max-width: 485px;
+    margin: 0 auto 64px;
+    text-align: left;
+
+    @media (max-width: $max-md) {
+      margin-bottom: 20px;
+    }
+  }
+  img {
+    @media (max-width: $max-md) {
+      margin-bottom: 50px;
+    }
+  }
+}

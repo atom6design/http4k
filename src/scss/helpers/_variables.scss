@@ -1,0 +1,38 @@
+// grid value
+$min-xs: 0;
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+
+$max-xs: 575.98px;
+$max-sm: 767.98px;
+$max-md: 991.98px;
+$max-lg: 1199.98px;
+
+// colors
+// background colors
+$primary-color: #60c0ff;
+$secondary-color: #ffa654;
+$gray-color: #f8f8f8;
+$blue-color: #75d6ff;
+$purple-color: #bd9eff;
+$green-color: #b2ffa6;
+$define-bg-color: #f4f4f4;
+
+// font colors
+$primary-font-color: #000000;
+$secondary-font-color: #ffffff;
+$define-font-color: #566368;
+
+// btn
+$btn-primary-hover: #2196f3;
+$btn-warning-hover: #ff9800;
+
+// code color
+$code-title: #575c75;
+$code-body: #4b4e67;
+$keyword-color: #60c0ff;
+$number-color: #ffa654;
+$string-color: #d7ff98;
+$method-color: #bd9eff;

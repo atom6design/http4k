@@ -1,0 +1,23 @@
+.btn {
+  min-width: 150px;
+  padding: 12px 0;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: #2196f3;
+    border-color: #2196f3;
+  }
+}
+
+.btn-warning {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover {
+    color: #ffffff;
+    background-color: $btn-warning-hover;
+    border-color: $btn-warning-hover;
+  }
+}

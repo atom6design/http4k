@@ -1,0 +1,17 @@
+block variables
+    - var title = "Intro"
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        include _styles
+        title #{title}
+    body
+
+        block content
+
+        // Spinner Loading
+        include ../components/_spinner-loading
+
+        include _scripts

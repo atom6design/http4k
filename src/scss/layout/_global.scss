@@ -1,0 +1,145 @@
+body {
+  font-family: "lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: $primary-font-color;
+}
+.h-80 {
+  height: 80%;
+}
+figure.code {
+  background-color: $code-body;
+  border-radius: 20px;
+
+  .title {
+    background-color: $code-title;
+    border-radius: 20px 20px 0 0;
+    color: $secondary-font-color;
+    padding: 10px 25px;
+
+    button {
+      float: right;
+      background: transparent;
+      border: navajowhite;
+      outline: none;
+    }
+  }
+  pre {
+    padding: 25px;
+    color: $secondary-font-color;
+    font-family: "lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+}
+// font-sizes
+h2,
+.h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  @media (max-width: $max-sm) {
+    font-size: 2rem;
+  }
+}
+h2.header {
+  font-weight: 900;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  @media (max-width: $max-sm) {
+    font-size: 1.5rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  opacity: 0.8;
+}
+
+.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+  @media (max-width: $max-sm) {
+    font-size: 1.25rem;
+  }
+}
+
+nav {
+  a {
+    font-size: 0.75rem;
+    line-height: 1.17;
+  }
+}
+
+footer {
+  a {
+    line-height: 1.19;
+  }
+}
+
+.btn {
+  font-size: 0.75rem;
+  line-height: 1.17;
+}
+
+.see-more {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+// colors
+h2.header,
+nav a,
+.btn,
+footer a {
+  color: $secondary-font-color;
+}
+
+.primary-color {
+  background-color: $primary-color;
+}
+.secondary-color {
+  background-color: $secondary-color;
+}
+.gray-color {
+  background-color: $gray-color;
+}
+.blue-color {
+  background-color: $blue-color;
+}
+.green-color {
+  background-color: $green-color;
+}
+.purple-color {
+  background-color: $purple-color;
+}
+
+// code colors
+.keyword-color {
+  color: $keyword-color;
+}
+
+.number-color {
+  color: $number-color;
+}
+.string-color {
+  color: $string-color;
+}
+.method-color {
+  color: $method-color;
+}
+
+.define-color {
+  color: $define-font-color;
+  background-color: $define-bg-color;
+  padding: 0 5px;
+}

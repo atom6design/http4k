@@ -1,0 +1,62 @@
+extends ./layout/_layout
+
+block variables
+    - var title = "Home Page"
+
+block content
+    // header
+    header
+        .overlay
+        include components/_nav
+        //- .container.h-80
+        //-     .row.justify-content-md-center.align-items-center.h-100
+        //-         .col-md-9.col-lg-7.col-xl-6.text-md-center
+        //-             h2.header.mb-4 The lightweight HTTP toolkit for Kotlin applications
+        //-             p.mb-5 http4k provides a functional and consistent way to serve and consume HTTP services.
+        //-             button.btn.btn-warning Quick Start
+
+    // documentation 1
+    .container
+        .documentation
+            .row.align-items-center
+                .col-md-6
+                    h2 See our documentation
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. 
+                    button.btn.btn-primary Quick Start
+                .col-md-6
+                    img(src="images/document-1.png" class="img-fluid" alt="document" )
+
+    // documentation 2
+    .documentation.custom
+        .container
+            .row.align-items-center
+                .col-md-6.order-2.order-md-1
+                    img(src="images/document-2.png" class="img-fluid" alt="document" )
+                .col-md-5.offset-md-1.order-1.order-md-2
+                    h2 See our documentation
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. 
+                    button.btn.btn-primary Quick Start
+
+        // company
+        .company
+            .container
+                .row.justify-content-center
+                    .col-lg-9.col-xl-7.text-center
+                        h2 Companies that are already using
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. 
+
+        // logo repeater
+        .logo-repeater
+
+    // developers
+    .documentation.developers
+        .container
+            .row
+                .col-md-6
+                    h2 Easy for developers
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor erat est neque lorem nunc. Ultrices purus ipsum sit pulvinar arcu augue quis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .col-md-6
+                    img(src="images/develop.png" class="img-fluid" alt="develop code")
+        .pumb
+            // pumb image
+            img(src="images/pumb.svg" class="img-fluid" alt="pumb")

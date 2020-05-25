@@ -1,0 +1,32 @@
+.navbar {
+  .navbar-toggler {
+    width: 60px;
+    &:focus {
+      outline: none;
+    }
+    .navbar-icon {
+      height: 3px;
+      border-radius: 2px;
+      background: #ffffff;
+      margin: 5px 0;
+    }
+  }
+
+  .navbar-nav {
+    @media (max-width: $max-md) {
+      padding: 15px 0;
+      border-radius: 7px;
+      background-color: rgba(96, 192, 255, 0.9);
+      align-items: left;
+    }
+  }
+
+  .btn {
+    @media (min-width: $min-lg) {
+      margin-left: 40px;
+    }
+    @media (max-width: $max-md) {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// variables
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// layout
+@import "layout/navbar";
+@import "layout/global";
+@import "layout/footer";
+
+// componenets
+@import "components/btns";
+@import "components/spinner-loading";
+@import "components/header";
+
+// pages
+@import "pages/home";
+@import "pages/landing";
+@import "pages/intro";

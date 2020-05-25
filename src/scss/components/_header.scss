@@ -1,0 +1,52 @@
+header {
+  position: relative;
+  // height: 614px;
+  // background: url("../images/header.png");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: top;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(73.88deg, #59aff5 32.66%, #60c0ff 91.08%);
+    // opacity: 0.7;
+  }
+  p {
+    color: $secondary-font-color;
+    @media (min-width: $min-md) {
+      padding: 0 25px;
+    }
+  }
+}
+
+.landing {
+  min-height: 672px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  background: url("../images/pipes-hero.svg");
+  background-color: #59aff5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  @media (max-width: $max-md) {
+    height: 100%;
+    background: none;
+    background-color: #59aff5;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  }
+  .navbar {
+    padding-top: 30px;
+  }
+  .overlay {
+    background-image: linear-gradient(73.88deg, #59aff5 32.66%, #60c0ff 91.08%);
+    opacity: 0.1;
+  }
+  p {
+    @media (min-width: $min-md) {
+      padding: 0;
+    }
+  }
+}

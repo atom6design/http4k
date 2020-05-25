@@ -1,0 +1,56 @@
+.documentation {
+  padding: 95px 0 80px 0;
+  @media (max-width: $max-md) {
+    padding: 40px 0 45px 0;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+  }
+  img {
+    @media (max-width: $max-md) {
+      margin-top: 60px;
+    }
+  }
+  &.custom {
+    background-color: $gray-color;
+    padding: 150px 0 130px 0;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    @media (max-width: $max-md) {
+      padding: 50px 0 50px 0;
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+.company {
+  padding: 150px 0 50px 0;
+  @media (max-width: $max-md) {
+    padding: 113px 0 30px 0;
+  }
+  p {
+    max-width: 100%;
+  }
+}
+
+.logo-repeater {
+  background: url("../images/logo-repeater.svg");
+  height: 56px;
+  background-repeat: space;
+}
+
+.developers {
+  padding: 170px 0 0 0;
+  @media (max-width: $max-md) {
+    padding: 70px 0 0 0;
+  }
+}
+
+.pumb {
+  position: relative;
+  z-index: 1;
+  max-height: 500px;
+}
