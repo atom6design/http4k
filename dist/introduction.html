@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Introduction</title>
+  </head>
+  <body>
+    <div class="intro">
+      <div class="row no-gutters justify-content-center">
+        <div class="aside col-auto"><img class="mb-3 sideToggle d-inline-block d-md-none" src="images/exchange-icon.svg" width="20" alt="" srcset=""/>
+          <div class="logo"><img src="images/logo-intro.svg" alt="logo" srcset=""/></div>
+          <form>
+            <div class="form-group"><img src="images/search-icon.svg" alt="" srcset=""/>
+              <input class="form-control" type="text" placeholder="Search..." aria-label="Search"/>
+            </div>
+          </form>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Rationale & Concepts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Installation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Getting started</a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Developer Guide </a>
+              <div class="dropdown-menu"><a class="dropdown-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Modules </a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#">AWS</a><a class="dropdown-item" href="#">Core</a></div><a class="dropdown-item" href="#">Application Testing</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials </a>
+              <div class="dropdown-menu"><a class="dropdown-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Modules </a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#">AWS</a><a class="dropdown-item" href="#">Core</a></div><a class="dropdown-item" href="#">Application Testing</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cookbook</a>
+              <div class="dropdown-menu"><a class="dropdown-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Modules </a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#">AWS</a><a class="dropdown-item" href="#">Core</a></div><a class="dropdown-item" href="#">Application Testing</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Performance</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">In action</a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+              <div class="dropdown-menu"><a class="dropdown-item" href="#">Modules</a><a class="dropdown-item" href="#">Application Testing</a></div>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="#">Getting Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contribute/Support </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">http4k</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">API docs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Changelog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <main class="col">
+          <div class="container">
+            <div class="content"><img class="mb-3 sideToggle" src="images/exchange-icon.svg" width="20" alt="" srcset=""/>
+              <h1 class="h3">Introduction</h1>
+              <p><a href="#">http4k</a> is a lightweight but fully-featured HTTP toolkit written in pure <a href="#">Kotlin</a> that enables the serving and consuming of HTTP services in a functional and consistent way. <a href="#">http4k</a> applications are just Kotlin functions which can be mounted into a running backend. For example, here's a simple echo server:</p>
+              <figure class="code">
+                <div class="title">EXAMPLE 
+                  <button class="getCode" data-toggle="tooltip" data-placement="top" title="Copy to clipboard"><img src="images/copy-icon.svg" alt=""/></button>
+                </div>
+                <pre><code><span class="keyword-color">val </span>app: HttpHandler = { request: Request -> Response(OK).body(request.body) }<br/><span class="keyword-color">val </span>server = app.asServer(SunHttp(<span class="number-color">8000</span>)).start()</code></pre>
+              </figure>
+              <p><a href="#">http4k</a> consists of a core library, http4k-core, providing a base HTTP implementation + a number of capability abstractions (such as servers, clients, templating, websockets etc). These capabilities are then implemented in add-on modules.</p>
+              <h4>The principles of http4k are:</h4>
+              <ul>
+                <li>
+                  <p><strong>Application as a Function:</strong> Based on the Twitter paper <a href="">"Your Server as a Function"</a>, all HTTP services can be composed of 2 types of simple function:</p>
+                  <ul>
+                    <li class="mb-4">HttpHandler: <span class="define-color">(Request) -> Response</span> - provides a remote call for processing a Request.</li>
+                    <li> Filter: <span class="define-color">(HttpHandler) -> HttpHandler</span>  - adds Request/Response pre/post processing. </li>
+                    <li>These filters are composed to make stacks of reusable behaviour that can then be applied to an HttpHandler.</li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>Immutability:</strong> All entities in the library are immutable unless their function explicitly disallows this.</p>
+                </li>
+                <li>
+                  <p><strong>Symmetric:</strong> The HttpHandler interface is identical for both HTTP services and clients. This allows for simple offline testability of applications, as well as plugging together of services without HTTP container being required.</p>
+                </li>
+                <li>
+                  <p><strong>Dependency-lite:</strong> Apart the fr om Kotlin StdLib, http4k-core module has ZERO dependencies and weighs in at ~700kb. Add-on mo dules only have dependencies required for specific implementation.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- Spinner Loading-->
+    <!-- Start Spinner Loading-->
+    <div class="spinner-loading"><img src="images/spinner.svg" alt="loading"/></div>
+    <!-- End Spinner Loading-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index-min.js"></script>
+  </body>
+</html>
